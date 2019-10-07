@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="table_content" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <VBox layoutX="33.0" layoutY="14.0" prefHeight="50.0" prefWidth="400.0">
+            <children>
+                <HBox prefHeight="50.0" prefWidth="350.0">
+                    <children>
+                        <Button fx:id="mBtnDelete" onAction="#onDelete" prefHeight="46.0" text="Delete" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <TableView id="table_view" fx:id="mTable" layoutX="33.0" layoutY="64.0" prefHeight="326.0" prefWidth="350.0">
+            <columns>
+                <TableColumn fx:id="mColumnSelect" prefWidth="60" resizable="false" text="SELECT" />
+                <TableColumn fx:id="mColumnName" prefWidth="120" resizable="false" text="NAME" />
+                <TableColumn fx:id="mColumnSex" prefWidth="130.0" resizable="false" text="SEX" />
+            </columns>
+        </TableView>
+        <HBox layoutX="33.0" layoutY="402.0" prefHeight="50.0" prefWidth="400.0">
+            <children>
+                <TextField fx:id="mTxtName" layoutX="33.0" layoutY="402.0" prefHeight="46.0" prefWidth="100.0" promptText="name" />
+                <TextField fx:id="mTxtSex" layoutX="33.0" layoutY="402.0" prefHeight="46.0" prefWidth="100.0" promptText="sex" />
+                <Button fx:id="mBtnAdd" layoutX="33.0" layoutY="402.0" onAction="#onAdd" prefHeight="46.0" text="Add" />
+            </children>
+        </HBox>
+
+    </children>
+</AnchorPane>
